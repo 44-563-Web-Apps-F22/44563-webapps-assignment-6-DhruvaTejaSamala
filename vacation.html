@@ -12,15 +12,12 @@
     <form>
             <input type="checkbox" id="air_travel" name="vacation" value=true>
             <label for="air_travel">Travel by Air</label> 
-
             <input type="checkbox" id="domestic_travel" name="vacation" value=true>
             <label for="domestic_travel">Domestic</label>
-
             <input type="checkbox" id="resort" name="vacation" value=false>
             <label for="resort">Resort</label>
         <input type="button" class="btn btn-success" value="Select a vacation" onclick="selectVacation()">
-    </form><br>
-   
+    </form><br>  
     <form>
         <div class="form-group">
             <label for="city">Enter a city</label>
@@ -33,7 +30,6 @@
         <input type="button" class="btn btn-warning" value="Update the vacation" onclick="updateVacation()">
     </form>
     <p id="results1">This text will be replaced </p>
-
 <script>
     let my_vacation = {};
     function selectVacation() {
@@ -61,7 +57,6 @@
         }
         document.getElementById("results1").innerHTML = JSON.stringify(my_vacation)
     }
-    
     function updateVacation()
     {
         let city=document.getElementById("city").value;
