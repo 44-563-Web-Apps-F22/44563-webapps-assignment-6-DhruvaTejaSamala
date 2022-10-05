@@ -19,8 +19,11 @@
     <input type="button" onclick="checkGuess()" value="Check the Guess">
 </form>
 
-
 <p id="result">Your result will show here </p>
+
+<div class="container">
+    <img src="silkworm.jpg" alt="Responsive image" id="image" height="100" width="100" onclick="swapImage()">
+</div>
 
 <script> 
 
@@ -40,6 +43,28 @@
                 alert("Wrong Musicain");
             }
            document.getElementById("result").innerHTML="correct "+correct+"  wrong "+wrong;
+        }
+
+        let useImage = 1;
+        image = document.getElementById("image")
+
+        function swapImage() {
+            switch (useImage) {
+                case 1:
+                    image.src = "silkworm.jpg"
+                    useImage += 1;
+                    break;
+                case 2:
+                    image.src = "moths.jpg"
+                    useImage += 1;
+                    break;
+                case 3:
+                    image.src = "ant.jpg"
+                    useImage = 1;
+                    break;
+                default:
+                    break;
+            }
         }
 </script>
 
